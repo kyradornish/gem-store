@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="col-md-4 col-md-offset-4">
+    <!-- Products container -->
+    <div class="list-group">
+      <div class="list-group-item">
+        <h3> {{ gem.name }}
+          <em class="pull-right">{{ gem.price | currency }}</em>
+        </h3>
+
+        <!-- Image gallery -->
+        <div class="img-wrap product-image">
+          <img src="{{ gem.imagePath }}">
+        </div>
+        <!-- Image Carousel -->
+        <ul class="img-thumbnail clearfix">
+          <li class="small-image pull-left thumbnail">
+            <img src="" alt="">
+          </li>
+        </ul>
+      </div>
+
+      <!-- Product Tabs -->
+      <app-tabs [gem]="gem"></app-tabs>
+    </div>
+  </div>
+</div>
